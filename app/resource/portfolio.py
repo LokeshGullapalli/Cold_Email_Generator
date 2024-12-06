@@ -2,6 +2,15 @@ import pandas as pd
 import chromadb
 import uuid
 import os
+import sys
+
+try:
+    # Use pysqlite3 for updated SQLite
+    import pysqlite3 as sqlite3
+    sys.modules['sqlite3'] = sqlite3
+except ImportError:
+    # Fallback to default SQLite if pysqlite3 is unavailable
+    import sqlite3
 
 class Portfolio:
     def __init__(self, file_path=None):
