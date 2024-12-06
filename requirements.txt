@@ -3,4 +3,4 @@ langchain
 openai
 pandas
 chromadb
-dotenv
+python-dotenv
