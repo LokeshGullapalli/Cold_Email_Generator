@@ -4,3 +4,5 @@ openai
 pandas
 chromadb
 python-dotenv
+langchain_community
+langchain-community
