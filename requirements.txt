@@ -5,7 +5,7 @@ openai
 pandas
 chromadb
 python-dotenv
-
+pysqlite3-binary
 
 streamlit
 langchain

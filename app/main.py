@@ -4,6 +4,10 @@ from resource.chains import Chain
 from resource.portfolio import Portfolio
 from resource.utils import clean_text
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 # Set page configuration at the top
 st.set_page_config(
     layout="wide",
