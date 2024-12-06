@@ -5,6 +5,8 @@ openai
 pandas
 chromadb
 python-dotenv
+pysqlite3-binary
+
 
 streamlit
 langchain
@@ -16,4 +18,6 @@ langchain_community
 langchain-community
 langchain_groq
 langchain-groq
+pysqlite3-binary
+
 
