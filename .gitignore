@@ -1,1 +1,4 @@
 app/resource/.env
+
+.idea/
+.vscode/
