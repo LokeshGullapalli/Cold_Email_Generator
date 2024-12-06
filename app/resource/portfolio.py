@@ -1,8 +1,8 @@
-import sqlite3
+import os
 import pandas as pd
 import chromadb
+from chromadb.config import Settings
 import uuid
-import os
 
 class Portfolio:
     def __init__(self, file_path=None):
@@ -13,8 +13,13 @@ class Portfolio:
         self.file_path = file_path
         self.data = pd.read_csv(self.file_path)
 
-        # Initialize ChromaDB Persistent Client
-        self.chroma_client = chromadb.PersistentClient(path="./vectorstore")
+        # Configure ChromaDB to use DuckDB as the backend
+        self.chroma_client = chromadb.PersistentClient(
+            Settings(
+                chroma_db_impl="duckdb",
+                persist_directory="./db"  # Directory where DuckDB files are stored
+            )
+        )
         self.collection = self.chroma_client.get_or_create_collection(name="portfolio")
 
     def load_portfolio(self):
