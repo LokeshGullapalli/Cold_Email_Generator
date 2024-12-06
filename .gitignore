@@ -2,3 +2,9 @@ app/resource/.env
 
 .idea/
 .vscode/
+
+*.pyc
+__pycache__/
+sqlite3.def
+sqlite3.dll
+vectorstore/

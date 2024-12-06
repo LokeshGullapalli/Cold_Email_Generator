@@ -68,7 +68,7 @@ def create_streamlit_app(llm, portfolio, clean_text):
         with col2:
             st.markdown("### About This Tool 🌱")
             st.write("This application fetches job postings from a provided careers page, "
-                     "and crafts a captivating cold email showcasing AtliQ's capabilities.")
+                     "and crafts a captivating cold email showcasing your company's capabilities.")
             st.write("Customize your experience using the sidebar, adjust the email format "
                      "and number of jobs, then watch as the results come alive!")
 
@@ -114,6 +114,7 @@ def create_streamlit_app(llm, portfolio, clean_text):
                         st.warning("⚠️ No jobs found at the provided URL.")
             except Exception as e:
                 st.error(f"An Error Occurred: {e}")
+
 
 
 if __name__ == "__main__":
