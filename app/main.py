@@ -4,6 +4,10 @@ from resource.chains import Chain
 from resource.portfolio import Portfolio
 from resource.utils import clean_text
 
+import sqlite3
+import streamlit as st
+
+st.write(f"SQLite version: {sqlite3.sqlite_version}")
 
 # Set page configuration at the top
 st.set_page_config(
