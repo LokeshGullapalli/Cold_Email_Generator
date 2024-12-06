@@ -6,3 +6,5 @@ chromadb
 python-dotenv
 langchain_community
 langchain-community
+langchain_groq
+langchain-groq
