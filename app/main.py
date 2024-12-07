@@ -2,7 +2,6 @@ import streamlit as st
 st.set_page_config(page_title="Cold Email Generator", page_icon="📧", layout="wide")
 
 
-import sqlite3
 from langchain_community.document_loaders import WebBaseLoader
 from resource.chains import Chain
 from resource.portfolio import Portfolio
