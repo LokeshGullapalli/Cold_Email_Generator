@@ -13,13 +13,15 @@ class Portfolio:
         self.file_path = file_path
         self.data = pd.read_csv(self.file_path)
 
-        # Force local mode by specifying None for server host and port
+        # Explicitly set chroma_api_impl to "local" and provide a fresh directory
+        # Also specify tenant and database explicitly:
         self.chroma_client = chromadb.Client(
             Settings(
-                chroma_server_host=None,
-                chroma_server_http_port=None,
-                persist_directory="./chroma_data"  # or "./vectorstore" if you prefer
-            )
+                chroma_api_impl="local",
+                persist_directory="./chroma_data"
+            ),
+            tenant="default_tenant",
+            database="default"
         )
 
         self.collection = self.chroma_client.get_or_create_collection(name="portfolio")
