@@ -1,8 +1,6 @@
-# Cold_Email_Generator
+# Cold Email Generator 📧
 
-<img src="./images/ui_example.png" alt="Cold Email Generator UI" width="500"/>
-
-An interactive Streamlit application for creating personalized, compelling cold emails based on scraped job postings. This project leverages AI to parse job descriptions, highlight your company's capabilities, and present highly tailored outreach emails in multiple formats.
+Welcome to the **Cold Email Generator**, an interactive Streamlit application that takes a careers page URL, extracts job postings, and generates a highly customized cold email. This tool leverages AI to parse job descriptions, highlight your company's capabilities, and produce compelling outreach emails.
 
 ## Table of Contents
 - [Features](#features)
