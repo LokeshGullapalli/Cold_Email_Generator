@@ -34,32 +34,46 @@ Welcome to the **Cold Email Generator**, an interactive Streamlit application th
 3. Install the required packages:
    ```bash
    pip install -r requirements.txt
-Ensure you have a .env file containing your GROQ_API_KEY.
+# Ensure you have a .env file containing your GROQ_API_KEY.
 
 4. Run the Streamlit app:
    ```bash
    streamlit run app/main.py
 
-## Example Usage
-Step 1: Provide the careers page URL in the main input box.
-Step 2: Choose between Markdown, HTML, or Plain Text on the sidebar.
-Step 3: Select the number of job listings to display.
-Step 4: Click "Submit" and watch the magic happen!
+5. Open the app in your browser:
 
-## Sample Images
-UI of the Website: Shows the main interface where you input a URL and see the generated content.
+# After running the above command, Streamlit will provide a local URL (e.g., http://localhost:8501). Open this URL in your browser to start using the app.
 
-Different Features (HTML, Markdown, Plain Text): Demonstrates how you can switch output formats easily and shows the sidebar options.
+## Usage
+- **Open the App:** Launch the app by visiting the provided URL after running streamlit run app/main.py.
+- **Input URL:** Paste a careers page URL into the input field on the main page.
+- **Customize Settings:** Use the sidebar to:
+-- Select the email format (Markdown, HTML, Plain Text).
+-- Adjust the number of job listings to display.
+- **Submit and View Results:** Click "Submit" to fetch and process job data. Review the generated cold email, job listings, and linked portfolio items.
 
-Sample Result: An example of the generated email and listed jobs, illustrating the final output.
+## Screenshots
+- UI of the Website
+<img src="./images/ui_example.png" alt="UI Example" width="300"/>
+
+- Different Features (HTML, Markdown, Plain Text)
+<img src="./images/format_features.png" alt="Format Features" width="300"/>
+
+- Sample Result
+<img src="./images/sample_result.png" alt="Sample Result" width="300"/>
+
+## Technologies
+- **Streamlit:** For building interactive web UIs with Python.
+- **Chromadb:** For vector-based storage and portfolio link retrieval.
+- **LangChain / LLM:** For AI-driven parsing and email generation.
+- **Python:** The main language for server-side logic and data handling.
+- **Groq API:** Accessing a large language model for intelligent text analysis.
 
 ## Troubleshooting
-If you encounter errors related to large context size, consider reducing the input size by chunking the content or summarizing before extraction.
-For issues related to ChromaDB storage or data migration, ensure you’re using a compatible Chroma version and have deleted old vectorstore directories if needed.
-Check the Streamlit logs and printed outputs for debugging messages.
+- **Context Too Big:** If you encounter a "Context too big" error, consider breaking the input text into chunks before processing.
+- **SQLite Issues:** If encountering SQLite errors with ChromaDB, ensure you’re using a supported version or switch to the DuckDB-based persistence.
+- **Check Logs:** For debugging, print out raw LLM output and inspect Streamlit logs.
 
-## Contributing
-Contributions are welcome! Feel free to open issues or submit pull requests for new features, bug fixes, or improvements.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
