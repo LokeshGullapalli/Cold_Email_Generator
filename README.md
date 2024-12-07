@@ -26,41 +26,40 @@ Welcome to the **Cold Email Generator**, an interactive Streamlit application th
 1. Clone the repository:
    ```bash
    git clone https://github.com/YourUsername/Cold_Email_Generator.git
-Navigate into the project directory:
-
-bash
-Copy code
-cd Cold_Email_Generator
-Install the required packages:
-
-bash
-Copy code
-pip install -r requirements.txt
+   
+2. Navigate into the project directory:
+   ```bash
+   cd Cold_Email_Generator
+   
+3. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
 Ensure you have a .env file containing your GROQ_API_KEY.
 
-Run the Streamlit app:
+4. Run the Streamlit app:
+   ```bash
+   streamlit run app/main.py
 
-bash
-Copy code
-streamlit run app/main.py
-Example Usage
+## Example Usage
 Step 1: Provide the careers page URL in the main input box.
 Step 2: Choose between Markdown, HTML, or Plain Text on the sidebar.
 Step 3: Select the number of job listings to display.
 Step 4: Click "Submit" and watch the magic happen!
-Sample Images
+
+## Sample Images
 UI of the Website: Shows the main interface where you input a URL and see the generated content.
 
 Different Features (HTML, Markdown, Plain Text): Demonstrates how you can switch output formats easily and shows the sidebar options.
 
 Sample Result: An example of the generated email and listed jobs, illustrating the final output.
 
-Troubleshooting
+## Troubleshooting
 If you encounter errors related to large context size, consider reducing the input size by chunking the content or summarizing before extraction.
 For issues related to ChromaDB storage or data migration, ensure you’re using a compatible Chroma version and have deleted old vectorstore directories if needed.
 Check the Streamlit logs and printed outputs for debugging messages.
-Contributing
+
+## Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests for new features, bug fixes, or improvements.
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
