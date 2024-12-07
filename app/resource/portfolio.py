@@ -13,11 +13,12 @@ class Portfolio:
         self.file_path = file_path
         self.data = pd.read_csv(self.file_path)
 
-        # Use the newer Chroma client configuration without `chroma_db_impl`.
-        # Just specify `persist_directory`, Chroma defaults to duckdb+parquet.
+        # Force local mode by specifying None for server host and port
         self.chroma_client = chromadb.Client(
             Settings(
-                persist_directory="./chroma_data"  # a new directory name
+                chroma_server_host=None,
+                chroma_server_http_port=None,
+                persist_directory="./chroma_data"  # or "./vectorstore" if you prefer
             )
         )
 
