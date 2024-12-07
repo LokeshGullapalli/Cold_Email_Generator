@@ -53,13 +53,13 @@ Welcome to the **Cold Email Generator**, an interactive Streamlit application th
 
 ## Screenshots
 - UI of the Website
-<img src="./images/UI.png" alt="UI Example" width="300"/>
+<img src="./app/UI.png" alt="UI Example" width="300"/>
 
 - Different Features (HTML, Markdown, Plain Text)
-<img src="./images/Email_format.png" alt="Format Features" width="300"/>
+<img src="./app/Email_format.png" alt="Format Features" width="300"/>
 
 - Sample Result
-<img src="./images/Sample_result.png" alt="Sample Result" width="300"/>
+<img src="./app/Sample_result.png" alt="Sample Result" width="300"/>
 
 ## Technologies
 - **Streamlit:** For building interactive web UIs with Python.
