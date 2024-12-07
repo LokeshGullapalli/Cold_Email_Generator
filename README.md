@@ -34,7 +34,7 @@ Welcome to the **Cold Email Generator**, an interactive Streamlit application th
 3. Install the required packages:
    ```bash
    pip install -r requirements.txt
-# Ensure you have a .env file containing your GROQ_API_KEY.
+- Ensure you have a .env file containing your GROQ_API_KEY.
 
 4. Run the Streamlit app:
    ```bash
@@ -42,7 +42,7 @@ Welcome to the **Cold Email Generator**, an interactive Streamlit application th
 
 5. Open the app in your browser:
 
-# After running the above command, Streamlit will provide a local URL (e.g., http://localhost:8501). Open this URL in your browser to start using the app.
+- After running the above command, Streamlit will provide a local URL (e.g., http://localhost:8501). Open this URL in your browser to start using the app.
 
 ## Usage
 - **Open the App:** Launch the app by visiting the provided URL after running streamlit run app/main.py.
