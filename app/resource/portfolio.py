@@ -4,6 +4,9 @@ from chromadb.config import Settings
 import uuid
 import os
 
+# Set the Chroma backend to DuckDB
+os.environ["CHROMA_DB_IMPL"] = "duckdb"
+
 class Portfolio:
     def __init__(self, file_path=None):
         if file_path is None:
@@ -13,13 +16,18 @@ class Portfolio:
         self.file_path = file_path
         self.data = pd.read_csv(self.file_path)
 
-        # Initialize ChromaDB Persistent Client
-        self.chroma_client = chromadb.PersistentClient(path="./vectorstore")
+        # Initialize ChromaDB Client using DuckDB backend
+        self.chroma_client = chromadb.Client(
+            Settings(
+                chroma_db_impl="duckdb",
+                persist_directory="./vectorstore"
+            )
+        )
         self.collection = self.chroma_client.get_or_create_collection(name="portfolio")
 
     def load_portfolio(self):
         # Add portfolio entries to ChromaDB if not already added
-        if not self.collection.count():
+        if self.collection.count() == 0:
             for _, row in self.data.iterrows():
                 self.collection.add(
                     documents=[row["Techstack"]],
@@ -34,6 +42,5 @@ class Portfolio:
 
         query_str = " ".join(skills)
         response = self.collection.query(query_texts=[query_str], n_results=2)
-
         metadatas = response.get("metadatas", [[]])[0]
         return [meta["links"] for meta in metadatas]
