@@ -13,12 +13,11 @@ class Portfolio:
         self.file_path = file_path
         self.data = pd.read_csv(self.file_path)
 
-        # Use the new style configuration
-        # `duckdb+parquet` is the recommended backend for persistence now.
+        # Use the newer Chroma client configuration without `chroma_db_impl`.
+        # Just specify `persist_directory`, Chroma defaults to duckdb+parquet.
         self.chroma_client = chromadb.Client(
             Settings(
-                chroma_db_impl="duckdb+parquet",
-                persist_directory="./vectorstore"
+                persist_directory="./chroma_data"  # a new directory name
             )
         )
 
@@ -41,4 +40,3 @@ class Portfolio:
         response = self.collection.query(query_texts=[query_str], n_results=2)
         metadatas = response.get("metadatas", [[]])[0]
         return [meta["links"] for meta in metadatas]
-
