@@ -1,31 +1,32 @@
-# Cold Email Generator 📧
+# Cold_Email_Generator
 
-Welcome to the **Cold Email Generator**, an interactive Streamlit application that takes a careers page URL, extracts job postings, and generates a highly customized cold email. This tool leverages AI to parse job descriptions, highlight your company's capabilities, and produce compelling outreach emails.
+<img src="./images/ui_example.png" alt="Cold Email Generator UI" width="500"/>
+
+An interactive Streamlit application for creating personalized, compelling cold emails based on scraped job postings. This project leverages AI to parse job descriptions, highlight your company's capabilities, and present highly tailored outreach emails in multiple formats.
+
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Features
-
-- **Input:** Provide any careers page URL from which the app will scrape job postings.
-- **Multiple Output Formats:** Choose between Markdown, HTML, or Plain Text for the generated cold emails.
-- **Limit Displayed Jobs:** Control how many job listings to display and include in the email.
-- **Auto-Fetched Portfolio Links:** Automatically query a portfolio (stored locally) to match job skills with relevant portfolio examples.
-
-## How It Works
-
-1. **Enter a URL:** Input a careers URL into the text field.
-2. **Select Format & Number of Jobs:** Use the sidebar to choose your email format and how many jobs to highlight.
-3. **Generate Email:** Click "Submit" to process the URL, extract job data, and produce your customized cold email.
-
-## Under the Hood
-
-- **Data Extraction:** Utilizes `WebBaseLoader` to scrape and clean content from the given URL.
-- **LLM-Powered Analysis:** Uses a large language model (via the Groq API) to parse job descriptions and format the output.
-- **ChromaDB Integration:** Links skills to related portfolio items stored in ChromaDB, showcasing relevant past work and capabilities.
+- 📜 **URL-Based Extraction**: Input any careers page URL and let the app automatically parse job descriptions.
+- 📝 **Multiple Formats**: Generate emails in Markdown, HTML, or Plain Text.
+- 🎯 **Targeted Job Listings**: Control how many jobs are displayed and integrated into the email.
+- 🔗 **Portfolio Integration**: Automatically fetch relevant portfolio links from ChromaDB to showcase your past work.
+- ⚡ **LLM-Powered Insights**: Uses an AI model (via Groq API) to analyze job data and produce custom emails.
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YourUsername/Cold_Email_Generator.git
+   git clone https://github.com/LokeshGullapalli/Cold_Email_Generator.git
+   cd Cold_Email_Generator
    
 2. Navigate into the project directory:
    ```bash
